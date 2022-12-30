@@ -1,3 +1,4 @@
+DEBUG = 0
 # Specify the target executable and the source files it depends on
 EXE = advent_of_code_day
 SOURCES = $(wildcard src/*.cc)
@@ -7,13 +8,19 @@ OBJECTS = $(addprefix obj/,$(notdir $(SOURCES:.cc=.o)))
 # Specify the C++ compiler and flags
 CC = g++
 CFLAGS = -Iinclude -std=c++11 -Wall -Wextra -Werror
+LDFLAGS =
+
+ifeq ($(DEBUG), 1)
+    CFLAGS += -g
+    LDFLAGS += -g
+endif
 
 # Default target
 all: $(EXE)
 
 # Link the executable from the object files
 $(EXE): $(OBJECTS)
-	$(CC) $(OBJECTS) -o $(EXE)
+	$(CC) $(LDFLAGS) $(OBJECTS) -o $(EXE)
 
 # Compile the source files into object files
 obj/%.o: src/%.cc
@@ -28,4 +35,5 @@ clean:
 .PHONY: run
 run: $(EXE)
 	./$(EXE)
+
 
