@@ -1,4 +1,4 @@
-DEBUG = 0
+DEBUG = 1
 # Specify the target executable and the source files it depends on
 EXE = advent_of_code_day
 SOURCES = $(wildcard src/*.cc)

@@ -14,6 +14,7 @@
 #include "10day.h"
 #include "11day.h"
 #include "12day.h"
+#include "13day.h"
 #include "utilities.h"
 
 int main(int argc, char *argv[]) {
@@ -177,7 +178,15 @@ int main(int argc, char *argv[]) {
               << std::endl;
     break;
   }
-  case 13:
+  case 13: {
+    std::vector<std::string> puzzle_input =
+        Utilities::ProcessInputFile("static/13day_input.txt");
+    std::cout << "Correct order pairs' sum: "
+              << DistressSignal::sum_of_right_pairs(puzzle_input) << std::endl;
+    std::cout << "Get decoder key: "
+              << DistressSignal::get_decoder_key(puzzle_input) << std::endl;
+    break;
+  }
   case 14:
   case 15:
   case 16:
