@@ -15,6 +15,18 @@
 #include "11day.h"
 #include "12day.h"
 #include "13day.h"
+#include "14day.h"
+#include "15day.h"
+#include "16day.h"
+#include "17day.h"
+#include "18day.h"
+#include "19day.h"
+#include "20day.h"
+#include "21day.h"
+#include "22day.h"
+#include "23day.h"
+#include "24day.h"
+#include "25day.h"
 #include "utilities.h"
 
 int main(int argc, char *argv[]) {
@@ -187,7 +199,17 @@ int main(int argc, char *argv[]) {
               << DistressSignal::get_decoder_key(puzzle_input) << std::endl;
     break;
   }
-  case 14:
+  case 14: {
+    std::vector<std::string> puzzle_input =
+        Utilities::ProcessInputFile("static/14day_input.txt");
+    std::cout << "Units of sand at rest: "
+              << RegolithReservoir::count_resting_sand(puzzle_input)
+              << std::endl;
+    std::cout << "Units of sand at rest with floor: "
+              << RegolithReservoir::count_resting_sand_with_floor(puzzle_input)
+              << std::endl;
+    break;
+  }
   case 15:
   case 16:
   case 17:
