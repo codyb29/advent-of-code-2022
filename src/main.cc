@@ -210,7 +210,22 @@ int main(int argc, char *argv[]) {
               << std::endl;
     break;
   }
-  case 15:
+  case 15: {
+    const std::vector<std::string> puzzle_input =
+        Utilities::ProcessInputFile("static/15day_input.txt");
+    int y = 2000000;
+    int grid_length = 4000000;
+    std::cout << "positions where beacon is not present at y= " << y << ": "
+              << BeaconExclusionZone::no_beacon_present(puzzle_input, y)
+              << std::endl;
+
+    std::cout << "tuning frequency: "
+              << BeaconExclusionZone::get_tuning_frequency(puzzle_input,
+                                                           grid_length)
+              << std::endl;
+
+    break;
+  }
   case 16:
   case 17:
   case 18:
