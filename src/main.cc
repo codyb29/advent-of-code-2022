@@ -87,7 +87,7 @@ int main(int argc, char *argv[]) {
   } break;
   case 4: {
     const std::vector<std::string> assignments =
-        Utilities::ProcessInputFile("static/04day_input.txt");
+        Utilities::ProcessInputFile("static/04day_test.txt");
     std::cout << "Completely Overlapping Pairs: "
               << CleanCamp::CountOverlappingPairs(assignments,
                                                   CleanCamp::IsFullyOverlapping)
@@ -223,10 +223,21 @@ int main(int argc, char *argv[]) {
               << BeaconExclusionZone::get_tuning_frequency(puzzle_input,
                                                            grid_length)
               << std::endl;
-
     break;
   }
-  case 16:
+  case 16: {
+    std::vector<std::string> puzzle_input =
+        Utilities::ProcessInputFile("static/16day_input.txt");
+    // std::cout << "Most pressure released: "
+    //           << ProboscideaVolcanium::maximum_pressure_release_solo(
+    //                  puzzle_input)
+    //           << std::endl;
+    std::cout << "Most pressure released with elephant assistance: "
+              << ProboscideaVolcanium::maximum_pressure_release_with_elephant(
+                     puzzle_input)
+              << std::endl;
+    break;
+  }
   case 17:
   case 18:
   case 19:
