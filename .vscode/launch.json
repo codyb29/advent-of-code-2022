@@ -9,7 +9,7 @@
         "name": "Build and Debug",
         "preLaunchTask": "Make",
         "program": "${workspaceFolder}/advent_of_code_day",
-        "args": ["16"],
+        "args": ["17"],
         "stopAtEntry": false,
         "cwd": "${workspaceFolder}",
         "environment": [],

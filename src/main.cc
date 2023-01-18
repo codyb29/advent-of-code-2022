@@ -238,7 +238,18 @@ int main(int argc, char *argv[]) {
               << std::endl;
     break;
   }
-  case 17:
+  case 17: {
+    std::vector<std::string> puzzle_input =
+        Utilities::ProcessInputFile("static/17day_input.txt");
+    const std::vector<signed char> jet_pattern =
+        get_jet_pattern(puzzle_input.front());
+    std::cout << "rock height after 2022: "
+              << get_rock_tower_height(jet_pattern, 2022L) << std::endl;
+    std::cout << "rock height after 1000000000000: "
+              << get_rock_tower_height(jet_pattern, 1000000000000L)
+              << std::endl;
+    break;
+  }
   case 18:
   case 19:
   case 20:
