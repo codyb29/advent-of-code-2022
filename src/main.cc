@@ -54,7 +54,7 @@ int main(int argc, char *argv[]) {
   switch (day) {
   case 1: {
     std::vector<std::string> input_buffer =
-        ConvertInputFileToVector("static/01day_input.txt");
+        ConvertInputFileToVector("static/01day_test.txt");
     std::cout << "Elf with most calories total: "
               << ElfWithMostCalories(input_buffer) << std::endl;
 
@@ -64,7 +64,7 @@ int main(int argc, char *argv[]) {
   }
   case 2: {
     const std::vector<std::pair<char, char>> encrypted_strategy_guide =
-        InputFileToPairs("static/02day_input.txt");
+        InputFileToPairs("static/02day_test.txt");
     int score = DecryptStrategyGuideIncorrectly(encrypted_strategy_guide);
     std::cout << "Estimated Total Score: " << score << std::endl;
 
@@ -76,7 +76,7 @@ int main(int argc, char *argv[]) {
   case 3: {
     const std::vector<std::string> rucksacks =
         RucksackOrganization::ConvertInputIntoRucksacks(
-            "static/03day_input.txt");
+            "static/03day_test.txt");
     const std::vector<std::pair<std::string, std::string>> rucksack_pairs =
         RucksackOrganization::ConvertRucksackIntoPairs(rucksacks);
     std::cout << "Sum of common items: "
@@ -100,7 +100,7 @@ int main(int argc, char *argv[]) {
   }
   case 5: {
     const std::vector<std::string> puzzle_input =
-        Utilities::ProcessInputFile("static/05day_input.txt");
+        Utilities::ProcessInputFile("static/05day_test.txt");
     const std::vector<std::stack<char>> crates =
         SupplyStacks::ProcessCrates(puzzle_input);
     const std::vector<std::vector<int>> instructions =
@@ -115,7 +115,7 @@ int main(int argc, char *argv[]) {
   }
   case 6: {
     std::vector<std::string> puzzle_input =
-        Utilities::ProcessInputFile("static/06day_input.txt");
+        Utilities::ProcessInputFile("static/06day_test.txt");
     std::string datastream_buffer = puzzle_input.front();
     std::cout << "First marker after 4 characters: "
               << TuningTrouble::GetStartOfPacket(datastream_buffer, 4)
@@ -128,7 +128,7 @@ int main(int argc, char *argv[]) {
   case 7: {
     NoSpaceLeftOnDevice noSpaceLeftOnDevice;
     std::vector<std::string> commands =
-        Utilities::ProcessInputFile("static/07day_input.txt");
+        Utilities::ProcessInputFile("static/07day_test.txt");
     noSpaceLeftOnDevice.BuildDirectoryTree(commands);
 
     long total = 0;
@@ -144,7 +144,7 @@ int main(int argc, char *argv[]) {
   }
   case 8: {
     std::vector<std::string> puzzle_input =
-        Utilities::ProcessInputFile("static/08day_input.txt");
+        Utilities::ProcessInputFile("static/08day_test.txt");
     std::vector<std::vector<int>> tree_heights =
         TreetopTreeHouse::ConvertToHeights(puzzle_input);
     std::cout << TreetopTreeHouse::CountTreesVisible(tree_heights) << std::endl;
@@ -154,7 +154,7 @@ int main(int argc, char *argv[]) {
   }
   case 9: {
     std::vector<std::string> instructions =
-        Utilities::ProcessInputFile("static/09day_input.txt");
+        Utilities::ProcessInputFile("static/09day_test.txt");
     std::cout << "Visited T Spots for 2: "
               << RopeBridge::CountVisitedNodesForSizeN(instructions, 2)
               << std::endl;
@@ -166,7 +166,7 @@ int main(int argc, char *argv[]) {
   }
   case 10: {
     std::vector<std::string> puzzle_input =
-        Utilities::ProcessInputFile("static/10day_input.txt");
+        Utilities::ProcessInputFile("static/10day_test.txt");
     std::cout << "total: " << CathodeRayTube::GetSignalStrength(puzzle_input)
               << std::endl;
 
@@ -175,7 +175,7 @@ int main(int argc, char *argv[]) {
   }
   case 11: {
     std::vector<std::string> puzzle_input =
-        Utilities::ProcessInputFile("static/11day_input.txt");
+        Utilities::ProcessInputFile("static/11day_test.txt");
     std::vector<Monkey> monkeys = MonkeyInTheMiddle::MakeMonkeys(puzzle_input);
     std::cout << MonkeyInTheMiddle::GetMonkeyBusinessLevelForRounds(monkeys,
                                                                     10000)
@@ -184,7 +184,7 @@ int main(int argc, char *argv[]) {
   }
   case 12: {
     std::vector<std::string> puzzle_input =
-        Utilities::ProcessInputFile("static/12day_input.txt");
+        Utilities::ProcessInputFile("static/12day_test.txt");
     std::cout << "fewest steps to E: "
               << HillClimbingAlgorithm::GetShortestPath(puzzle_input)
               << std::endl;
@@ -192,7 +192,7 @@ int main(int argc, char *argv[]) {
   }
   case 13: {
     std::vector<std::string> puzzle_input =
-        Utilities::ProcessInputFile("static/13day_input.txt");
+        Utilities::ProcessInputFile("static/13day_test.txt");
     std::cout << "Correct order pairs' sum: "
               << DistressSignal::sum_of_right_pairs(puzzle_input) << std::endl;
     std::cout << "Get decoder key: "
@@ -201,7 +201,7 @@ int main(int argc, char *argv[]) {
   }
   case 14: {
     std::vector<std::string> puzzle_input =
-        Utilities::ProcessInputFile("static/14day_input.txt");
+        Utilities::ProcessInputFile("static/14day_test.txt");
     std::cout << "Units of sand at rest: "
               << RegolithReservoir::count_resting_sand(puzzle_input)
               << std::endl;
@@ -212,7 +212,7 @@ int main(int argc, char *argv[]) {
   }
   case 15: {
     const std::vector<std::string> puzzle_input =
-        Utilities::ProcessInputFile("static/15day_input.txt");
+        Utilities::ProcessInputFile("static/15day_test.txt");
     int y = 2000000;
     int grid_length = 4000000;
     std::cout << "positions where beacon is not present at y= " << y << ": "
@@ -227,7 +227,7 @@ int main(int argc, char *argv[]) {
   }
   case 16: {
     std::vector<std::string> puzzle_input =
-        Utilities::ProcessInputFile("static/16day_input.txt");
+        Utilities::ProcessInputFile("static/16day_test.txt");
     // std::cout << "Most pressure released: "
     //           << ProboscideaVolcanium::maximum_pressure_release_solo(
     //                  puzzle_input)
@@ -240,7 +240,7 @@ int main(int argc, char *argv[]) {
   }
   case 17: {
     std::vector<std::string> puzzle_input =
-        Utilities::ProcessInputFile("static/17day_input.txt");
+        Utilities::ProcessInputFile("static/17day_test.txt");
     const std::vector<signed char> jet_pattern =
         get_jet_pattern(puzzle_input.front());
     std::cout << "rock height after 2022: "
@@ -250,7 +250,15 @@ int main(int argc, char *argv[]) {
               << std::endl;
     break;
   }
-  case 18:
+  case 18: {
+    std::vector<std::string> puzzle_input =
+        Utilities::ProcessInputFile("static/18day_test.txt");
+    std::cout << "Surface area of scanned lava: "
+              << get_lava_surface_area_pt1(puzzle_input) << std::endl;
+    std::cout << "Surface area of scanned lava without air pockets: "
+              << get_lava_surface_area_pt2(puzzle_input) << std::endl;
+    break;
+  }
   case 19:
   case 20:
   case 21:
