@@ -1,3 +1,6 @@
+# don't commit my actual input
 static/*_input.txt
+# don't commit the executable
 advent_of_code_day
-obj/*
+# don't commit any object files.
+obj/*.o

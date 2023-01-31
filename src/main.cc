@@ -259,7 +259,16 @@ int main(int argc, char *argv[]) {
               << get_lava_surface_area_pt2(puzzle_input) << std::endl;
     break;
   }
-  case 19:
+  case 19: {
+    std::vector<std::string> puzzle_input =
+        Utilities::ProcessInputFile("static/19day_input.txt");
+    std::cout << "Sum of blueprint quality level: "
+              << get_sum_of_all_blueprint_quality(puzzle_input, 24)
+              << std::endl;
+    std::cout << "product of top 3 blueprints: "
+              << get_product_of_top_3(puzzle_input, 32) << std::endl;
+    break;
+  }
   case 20:
   case 21:
   case 22:
