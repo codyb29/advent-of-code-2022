@@ -261,7 +261,7 @@ int main(int argc, char *argv[]) {
   }
   case 19: {
     std::vector<std::string> puzzle_input =
-        Utilities::ProcessInputFile("static/19day_input.txt");
+        Utilities::ProcessInputFile("static/19day_test.txt");
     std::cout << "Sum of blueprint quality level: "
               << get_sum_of_all_blueprint_quality(puzzle_input, 24)
               << std::endl;
@@ -269,7 +269,17 @@ int main(int argc, char *argv[]) {
               << get_product_of_top_3(puzzle_input, 32) << std::endl;
     break;
   }
-  case 20:
+  case 20: {
+    std::vector<std::string> puzzle_input =
+        Utilities::ProcessInputFile("static/20day_input.txt");
+    std::cout
+        << "The sum of the three numbers that form the grove coordinates: "
+        << grove_positioning_system_pt1(puzzle_input) << std::endl;
+    std::cout
+        << "The sum of the three numbers that form the grove coordinates: "
+        << grove_positioning_system_pt2(puzzle_input) << std::endl;
+    break;
+  }
   case 21:
   case 22:
   case 23:
