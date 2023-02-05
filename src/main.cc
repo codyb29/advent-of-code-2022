@@ -271,7 +271,7 @@ int main(int argc, char *argv[]) {
   }
   case 20: {
     std::vector<std::string> puzzle_input =
-        Utilities::ProcessInputFile("static/20day_input.txt");
+        Utilities::ProcessInputFile("static/20day_test.txt");
     std::cout
         << "The sum of the three numbers that form the grove coordinates: "
         << grove_positioning_system_pt1(puzzle_input) << std::endl;
@@ -280,7 +280,16 @@ int main(int argc, char *argv[]) {
         << grove_positioning_system_pt2(puzzle_input) << std::endl;
     break;
   }
-  case 21:
+  case 21: {
+    const std::vector<std::string> puzzle_input =
+        Utilities::ProcessInputFile("static/21day_test.txt");
+    std::cout << "The number the monkey named root will yell: "
+              << monkey_math_pt1(puzzle_input) << std::endl;
+    std::cout
+        << "The sum of the three numbers that form the grove coordinates: "
+        << monkey_math_pt2(puzzle_input) << std::endl;
+    break;
+  }
   case 22:
   case 23:
   case 24:
