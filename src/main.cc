@@ -285,12 +285,19 @@ int main(int argc, char *argv[]) {
         Utilities::ProcessInputFile("static/21day_test.txt");
     std::cout << "The number the monkey named root will yell: "
               << monkey_math_pt1(puzzle_input) << std::endl;
-    std::cout
-        << "The sum of the three numbers that form the grove coordinates: "
-        << monkey_math_pt2(puzzle_input) << std::endl;
+    std::cout << "The number that human should yell: "
+              << monkey_math_pt2(puzzle_input) << std::endl;
     break;
   }
-  case 22:
+  case 22: {
+    std::vector<std::string> puzzle_input =
+        Utilities::ProcessInputFile("static/22day_test.txt");
+    std::cout << "The final password: " << monkey_map_pt1(puzzle_input)
+              << std::endl;
+    // std::cout << "The number that human should yell: "
+    //           << monkey_map_pt2(puzzle_input) << std::endl;
+    break;
+  }
   case 23:
   case 24:
   case 25:
