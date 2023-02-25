@@ -298,7 +298,12 @@ int main(int argc, char *argv[]) {
     //           << monkey_map_pt2(puzzle_input) << std::endl;
     break;
   }
-  case 23:
+  case 23: {
+    std::vector<std::string> puzzle_input =
+        Utilities::ProcessInputFile("static/23day_input.txt");
+    unstable_diffusion(puzzle_input);
+    break;
+  }
   case 24:
   case 25:
   default:
