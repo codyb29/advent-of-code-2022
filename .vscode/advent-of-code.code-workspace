@@ -55,7 +55,9 @@
 			"stdexcept": "cpp",
 			"streambuf": "cpp",
 			"typeinfo": "cpp",
-			"list": "cpp"
+			"list": "cpp",
+			"map": "cpp",
+			"set": "cpp"
 		}
 	},
 	"launch": {

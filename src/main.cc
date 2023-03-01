@@ -300,11 +300,21 @@ int main(int argc, char *argv[]) {
   }
   case 23: {
     std::vector<std::string> puzzle_input =
-        Utilities::ProcessInputFile("static/23day_input.txt");
+        Utilities::ProcessInputFile("static/23day_test.txt");
     unstable_diffusion(puzzle_input);
     break;
   }
-  case 24:
+  case 24: {
+    std::vector<std::string> puzzle_input =
+        Utilities::ProcessInputFile("static/24day_input.txt");
+    std::cout << "Fewest number of minutes required to avoid the blizzards and "
+                 "reach the goal: "
+              << blizzard_basin_pt1(puzzle_input) << std::endl;
+    std::cout << "Fewest number of minutes required to reach the goal, go back "
+                 "to the start, then reach the goal again: "
+              << blizzard_basin_pt2(puzzle_input) << std::endl;
+    break;
+  }
   case 25:
   default:
     std::cout << "Not solved yet..." << std::endl;
