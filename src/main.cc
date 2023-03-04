@@ -315,7 +315,13 @@ int main(int argc, char *argv[]) {
               << blizzard_basin_pt2(puzzle_input) << std::endl;
     break;
   }
-  case 25:
+  case 25: {
+    std::vector<std::string> puzzle_input =
+        Utilities::ProcessInputFile("static/25day_input.txt");
+    std::cout << "SNAFU number do you supply to Bob's console: "
+              << full_of_hot_air_pt1(puzzle_input) << std::endl;
+    break;
+  }
   default:
     std::cout << "Not solved yet..." << std::endl;
   }
