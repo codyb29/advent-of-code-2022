@@ -294,8 +294,8 @@ int main(int argc, char *argv[]) {
         Utilities::ProcessInputFile("static/22day_test.txt");
     std::cout << "The final password: " << monkey_map_pt1(puzzle_input)
               << std::endl;
-    // std::cout << "The number that human should yell: "
-    //           << monkey_map_pt2(puzzle_input) << std::endl;
+    std::cout << "The final password as cube: " << monkey_map_pt2(puzzle_input)
+              << std::endl;
     break;
   }
   case 23: {
@@ -306,7 +306,7 @@ int main(int argc, char *argv[]) {
   }
   case 24: {
     std::vector<std::string> puzzle_input =
-        Utilities::ProcessInputFile("static/24day_input.txt");
+        Utilities::ProcessInputFile("static/24day_test.txt");
     std::cout << "Fewest number of minutes required to avoid the blizzards and "
                  "reach the goal: "
               << blizzard_basin_pt1(puzzle_input) << std::endl;
@@ -317,13 +317,13 @@ int main(int argc, char *argv[]) {
   }
   case 25: {
     std::vector<std::string> puzzle_input =
-        Utilities::ProcessInputFile("static/25day_input.txt");
+        Utilities::ProcessInputFile("static/25day_test.txt");
     std::cout << "SNAFU number do you supply to Bob's console: "
               << full_of_hot_air_pt1(puzzle_input) << std::endl;
     break;
   }
   default:
-    std::cout << "Not solved yet..." << std::endl;
+    std::cout << "All days completed! pick a day between 1 - 25." << std::endl;
   }
 
   return 0;
